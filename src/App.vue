@@ -1,5 +1,9 @@
 <template>
-  <home />
+  <v-app id="app">
+    <v-main>
+      <home />
+    </v-main>
+  </v-app>
 </template>
 
 <script>
