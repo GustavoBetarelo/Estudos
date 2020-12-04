@@ -5,14 +5,14 @@
         <!-- Top Bar -->
         <v-flex
           shrink
-          class="d-flex justify-space-between align-center mx-auto mt-2 mb-10 pa-4 top-bar-desing rounded-xl"
+          class=" col-12 justify-space-between align-center mx-auto mt-2 pa-4 top-bar-desing rounded-xl"
         >
           <v-layout>
             <v-flex>
               <v-container fluid class="pa-0" grid-list-xl>
                 <v-layout align-center justify-center>
                   <v-flex class="hidden-xs-only" shrink>
-                    <h6 class="text-h6 font-weight-bold">
+                    <h6 class="text-h5 font-weight-bold">
                       Girabel's Enterprise
                     </h6>
                   </v-flex>
@@ -57,32 +57,35 @@
               </v-container>
             </v-flex>
           </v-layout>
-        </v-flex>
 
-        <v-flex>
-          <div>
+          <v-flex class="pa-4">
             <v-btn @click="marcas">Listar Marcas</v-btn>
-          </div>
-          <v-simple-table>
-            <template v-slot:default>
-              <thead>
-                <tr>
-                  <th class="text-left">
-                    Vai ter dados aqui
-                  </th>
-                  <th class="text-left">
-                    Confia pai
-                  </th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr v-for="item in desserts" :key="item.name">
-                  <td>{{ item.name }}</td>
-                  <td>{{ item.calories }}</td>
-                </tr>
-              </tbody>
-            </template>
-          </v-simple-table>
+
+            <v-simple-table class="pa-4 mt-4">
+              <template v-slot:default>
+                <thead>
+                  <tr>
+                    <th class="text-center font-weight-bold text-h6">
+                      Vai ter dados aqui
+                    </th>
+                    <th class="text-center font-weight-bold text-h6">
+                      Confia pai
+                    </th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr
+                    class="text-center"
+                    v-for="item in desserts"
+                    :key="item.name"
+                  >
+                    <td>{{ item.name }}</td>
+                    <td>{{ item.calories }}</td>
+                  </tr>
+                </tbody>
+              </template>
+            </v-simple-table>
+          </v-flex>
         </v-flex>
       </div>
     </v-layout>
