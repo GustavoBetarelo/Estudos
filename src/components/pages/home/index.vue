@@ -145,8 +145,7 @@ export default {
   methods: {
     async marcas() {
       try {
-        const action = "marcas.json";
-        const response = await api.get(`/carros/${action}`);
+        const response = await api.get("/butterfree");
         console.log(response);
       } catch (error) {
         console.log(error);
